@@ -3,6 +3,8 @@
 wget https://storage.googleapis.com/pub/gsutil.tar.gz
 # Install gsutil
 tar xfz gsutil.tar.gz -C $HOME
+# Define configuration file
+export BOTO_CONFIG=.boto
 # Copy APK to bucket
 ~/gsutil/gsutil cp AdAway/build/outputs/apk/AdAway-debug.apk gs://build-repository/
 # Allow everyone to read APK
